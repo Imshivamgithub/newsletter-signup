@@ -53,14 +53,14 @@ const request = https.request(url, options, function(response) {
 
 
   response.on("data", function(data) {
-    console.log(JSON.parse(data));
+ //   console.log(JSON.parse(data));
   });
 });
 
 request.write(jsonData);
 request.end();
 
-  // console.log(firstName, lastName, email);
+   console.log(firstName, lastName, email);
 });
 
 app.post("/failure", function(req, res) {
@@ -68,8 +68,8 @@ app.post("/failure", function(req, res) {
 });
 
 
-app.listen(process.env.PORT || 3000, function() {
-  console.log("Server is running on port 3000 .")
+app.listen(process.env.PORT || 8080, function() {
+  console.log("Server is running on port 8080 .")
 });
 
 
